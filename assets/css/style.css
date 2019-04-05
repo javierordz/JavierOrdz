@@ -14,24 +14,39 @@ body {
 a {
     color: #101011;
     letter-spacing: 0.1em;
-    text-decoration: none;
 }
-
 a:hover {
     text-decoration: none;
     color: #5D2E53;
 }
 
+.linkText {
+    font-family: 'Racing Sans One', cursive;
+    line-height: 50px;
+}
+
+h1 {
+    font-weight: bolder;
+    font-size: 7em;
+    text-align: center;
+    background: linear-gradient(to right, #5D2E53, #8D3357, #C94D57, #F05D5B, #F49A64);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
 /* BORDERS */
 #topBorder, #bottomBorder, #leftBorder, #rightBorder {
 	background: #F2F2F2;
-	position: fixed;
+    position: fixed;
+    text-align: center;
+    color: #101011;
 }
 
 #leftBorder, #rightBorder {
     top: 0; 
     bottom: 0;
     width: 50px;
+    height: 100%;
 }
 #leftBorder { left: 0; }
 #rightBorder { right: 0; }
@@ -40,18 +55,62 @@ a:hover {
     left: 0;
     right: 0;
     height: 50px;
+    width: 100%;
     padding-left: 50px;
 }
 #topBorder { top: 0; }
 #bottomBorder { bottom: 0; }
 
-.linkText {
-    font-family: 'Racing Sans One', cursive;
-    line-height: 50px;
+/* BORDER LINKS */
+.social {
+    width: 18px;
+    height: 18px;
+    margin: 14px;
 }
 
+.verticalMenu {
+    position: absolute;
+    top: calc(50% - 96px);
+    line-height: 2.5em;
+}
 
+#portfolio {
+    top: calc(50% - 51px);
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    color: #101011;
+    cursor: pointer;
+}
 
+/* CONTENT ——— S P L A S H */
+.wrapper {
+    width: calc(100% - 100px);
+    height: calc(100% - 100px);
+    position: absolute;
+    top: 50px;
+    left: 50px;
+    margin: auto;
+    align-items: center;
+    justify-content: center;
+}
+
+#splash {
+    margin: auto;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+#logo {
+    margin: 0 auto;
+    display: block;
+    width: 480px;
+}
+
+#slogan {
+    font-size: 2em;
+    text-align: center;
+}
 
 .colorValues {
     color: #F2F2F2;
@@ -62,6 +121,12 @@ a:hover {
     color: #F05D5B;
     color: #F49A64;
 }
+.c1 {color: #5D2E53;}
+.c2 {color: #8D3357;}
+.c3 {color: #C94D57;}
+.c4 {color: #F05D5B;}
+.c5 {color: #F49A64;}
+
 
 /* MOBILE STYLING */
 @media 

@@ -10,34 +10,53 @@
     <link href="https://fonts.googleapis.com/css?family=Racing+Sans+One|Roboto" rel="stylesheet">
     <!-- BOOTSTRAP -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <!-- + CUSTOM CSS -->
+    <!-- CUSTOM CSS -->
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
-
-    <!--[if lte IE 6]>
-	    <style>#top, #bottom, #left, #right { display: none; }</style>
-    <![endif]-->
+    <!-- ICONS -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 </head>
 
 <body>
-    <!-- BORDERS -->
-    <section id="topBorder">
-        <a href=# class="linkText">JAVIER ORDONEZ</a>
+    <!-- TOP BORDER -->
+    <header id="topBorder">
+        <a href=# class="linkText" id="nameLink">JAVIER ORDONEZ</a>
+    </header>
+
+    <!-- LEFT BORDER -->
+    <aside id="leftBorder">
+        <div class="verticalMenu">
+            <a href="https://github.com/javierordz" target="_blank"><img src="assets/images/s-github.png" alt="Github" class="social"></a>
+            <a href="https://www.linkedin.com/in/javierordz/" target="_blank"><img src="assets/images/s-linkedin.png" alt="LinkedIn" class="social"></a>
+            <a href="https://www.instagram.com/javierordz/" target="_blank"><img src="assets/images/s-instagram.png" alt="Instagram" class="social"></a>
+            <a href="https://www.facebook.com/javier.ordz" target="_blank"><img src="assets/images/s-facebook.png" alt="Facebook" class="social"></a>
+        </div>
+    </aside>
+
+    <!-- CONTENT -->
+    <section class="wrapper">
+        <div id="splash">
+            <h1>DESIGN + STORY</h1>
+            <img src="assets/images/VB-icon.png" id="logo">
+            <p id="slogan">FROM BARE BONES TO FULL-GROWN <br> WE BELIEVE IN YOUR DREAM</p>
+
+        </div>
+
     </section>
 
-    <section id="leftBorder">
-        <a href="#"><img src="assets/images/social-github-32.png" alt="Github" class="socialLink"></a>
-        <a href="#"><img src="assets/images/social-linkedin-32.png" alt="Github" class="socialLink"></a>
-        <a href="#"><img src="assets/images/social-instagram-32.png" alt="Github" class="socialLink"></a>
-        <a href="#"><img src="assets/images/social-facebook-32.png" alt="Github" class="socialLink"></a>
-    </section>
+    <!-- RIGHT BORDER -->
+    <aside id="rightBorder">
+        <div class="verticalMenu" id="portfolio">
+            <a class="linkText" id="portfolioLink">PORTFOLIO</a>
+        </div>
+    </aside>
     
-    <div id="rightBorder">
-        
-    </div>
-
-    <div id="bottomBorder"></div>
-    </section>
-
+    <!-- BOTTOM BORDER -->
+    <footer id="bottomBorder">
+        <a class="linkText" id="nameLink"><i class="fas fa-mobile-alt"></i> (214) 681-8131</a> &nbsp; &nbsp; &nbsp;
+        <i class="fas fa-angle-left"></i> &nbsp;&nbsp;
+        <i class="fas fa-angle-right"></i> &nbsp; &nbsp; &nbsp;
+        <a href="mailto:javier.ordz@gmail.com" class="linkText" id="nameLink"><i class="fas fa-envelope"></i> JAVIER.ORDZ@GMAIL.COM</a>
+    </footer>
 
     <script type="text/javascript" src="assets/javascript/logic.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
