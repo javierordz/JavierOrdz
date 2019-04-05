@@ -1,0 +1,73 @@
+/* GLOBAL */
+html {
+    font-size: 1em;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    background-color: #101011;
+    color: #F2F2F2;
+    font-family: 'Roboto', sans-serif;
+}
+
+a {
+    color: #101011;
+    letter-spacing: 0.1em;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+    color: #5D2E53;
+}
+
+/* BORDERS */
+#topBorder, #bottomBorder, #leftBorder, #rightBorder {
+	background: #F2F2F2;
+	position: fixed;
+}
+
+#leftBorder, #rightBorder {
+    top: 0; 
+    bottom: 0;
+    width: 50px;
+}
+#leftBorder { left: 0; }
+#rightBorder { right: 0; }
+		
+#topBorder, #bottomBorder {
+    left: 0;
+    right: 0;
+    height: 50px;
+    padding-left: 50px;
+}
+#topBorder { top: 0; }
+#bottomBorder { bottom: 0; }
+
+.linkText {
+    font-family: 'Racing Sans One', cursive;
+    line-height: 50px;
+}
+
+
+
+
+.colorValues {
+    color: #F2F2F2;
+    color: #101011;
+    color: #5D2E53;
+    color: #8D3357;
+    color: #C94D57;
+    color: #F05D5B;
+    color: #F49A64;
+}
+
+/* MOBILE STYLING */
+@media 
+
+/* Fairly small screens including iphones */
+only screen and (max-width: 500px),
+/* iPads */
+only screen and (min-device-width: 768px) and (max-device-width: 1024px) 
+{#topBorder, #bottomBorder, #leftBorder, #rightBorder { display: none; }}
