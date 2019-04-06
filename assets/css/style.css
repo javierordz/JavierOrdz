@@ -1,6 +1,13 @@
 /* GLOBAL */
 html {
     font-size: 1em;
+    overflow: scroll;
+    overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+    width: 0px;
+    background: transparent;
 }
 
 body {
@@ -8,12 +15,13 @@ body {
     height: 100%;
     background-color: #101011;
     color: #F2F2F2;
-    font-family: 'Teko', sans-serif;
+    font-family: 'Roboto', sans-serif;
 }
 
 a {
     color: #101011;
     letter-spacing: 0.1em;
+    text-transform: uppercase;
 }
 
 a:hover {
@@ -24,13 +32,17 @@ a:hover {
 .linkText {
     font-family: 'Racing Sans One', cursive;
     line-height: 50px;
+    text-transform: uppercase;
+    margin: 20px 10px;
 }
 
 h1 {
+    font-family: 'Racing Sans One', cursive;
     font-weight: bolder;
-    font-size: 7.5em;
+    font-size: 6em;
     letter-spacing: .15em;
     text-align: center;
+    margin-top: 25px;
     background: linear-gradient(to left, #5D2E53, #8D3357, #C94D57, #F05D5B, #F49A64);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -39,9 +51,19 @@ h1 {
 h3 {
     font-family: 'Racing Sans One', cursive;
     font-weight: bolder;
-    font-size: 2em;
-    letter-spacing: .15em;
+    font-size: 2.1em;
+    letter-spacing: .2em;
     text-align: center;
+    text-transform: uppercase;
+}
+
+p {
+    margin-top: 0;
+    margin-bottom: .5rem;
+    font-size: 1.7em;
+    font-weight: 400;
+    line-height: 1.2em;
+    letter-spacing: .05em;
 }
 
 /* BORDERS */
@@ -66,7 +88,6 @@ h3 {
     right: 0;
     height: 50px;
     width: 100%;
-    padding-left: 50px;
 }
 #topBorder { top: 0; z-index: 99; }
 #bottomBorder { bottom: 0; }
@@ -80,12 +101,48 @@ h3 {
 
 .verticalMenu {
     position: absolute;
-    top: calc(50% - 96px);
+    display: block;
+    top: 50%;
+    transform: translate(0, -50%);
     line-height: 2.5em;
 }
 
-#pf {
-    top: calc(50% - 51px);
+.popupText {
+    visibility: hidden;
+    width: 160px;
+    background-color: #8D3357;
+    color: #F2F2F2;
+    text-align: center;
+    font-size: .7em;
+    font-weight: 400;
+    border-radius: 6px;
+    padding: 8px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 3%;
+    left: 242%;
+    margin-left: -80px;
+    opacity: 0;
+    transition: opacity 1s;
+}
+
+.popupText::after {
+    content: "";
+    position: absolute;
+    top: 30%;
+    left: -3%;
+    margin-left: -9px;
+    border-width: 7px;
+    border-style: solid;
+    border-color: transparent #8D3357 transparent transparent;
+}
+
+.fa-mobile-alt:hover .popupText {
+    visibility: visible;
+    opacity: 1;
+}
+
+#switchBtn {
     writing-mode: vertical-rl;
     text-orientation: mixed;
     color: #101011;
@@ -97,6 +154,7 @@ h3 {
     width: calc(100% - 100px);
     height: calc(100% - 100px);
     position: absolute;
+    background-color: #101011;
     top: 50px;
     left: 50px;
     margin: auto;
@@ -104,30 +162,56 @@ h3 {
     justify-content: center;
 }
 
-#splash {
-    margin: auto;
-    align-items: center;
-    justify-content: center;
-    position: relative;
+.hidden-element {
+    display: none;
 }
+
+#splash, .container-fluid {
+    margin: auto;
+    width: 100%;
+    height: 100%;
+    padding: 25px;
+}
+
+.max-height {height: 100%;}
+.row-25 {height: 25%;}
+.row-50 {height: 50%;}
 
 #logo {
-    margin: 0 auto;
     display: block;
-    width: 480px;
+    position: fixed;
+    top: 33%;
+    left: 3%;
 }
 
-#slogan {
-    font-size: 2em;
+#block1, #block2, #block3, #block4, #block5 {
     text-align: center;
+    padding: 25px 10px;
+    margin: 0 auto;
+    font-size: 1.2em;
 }
 
+#block1 {border: 2px solid #F49A64; padding: 25px;}
+#block2 {border: 2px solid #F05D5B;}
+#block3 {border: 2px solid #C94D57;}
+#block4 {border: 2px solid #8D3357;}
+#block5 {border: 2px solid #5D2E53; margin-bottom: 100px;}
 
+.ellipse {
+    font-size: 2em;
+    left: 50%;
+    padding: 25px 0;
+}
 
-
+/* CONTENT ——— P O R T F O L I O */
 .proj {
     position: relative;
-    width: 50%;
+    width: 500px;
+    margin: 0 auto 100px;
+}
+
+div .proj:first-of-type {
+    margin-top: 50px;
 }
 
 .projImg {
@@ -146,6 +230,7 @@ h3 {
     position: absolute;
     top: 50%;
     left: 50%;
+    width: 95%;
     transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
     text-align: center;
@@ -164,16 +249,18 @@ h3 {
     color: #F2F2F2;
     font-size: 1em;
     padding: 10px 32px;
-  }
-
-.projDesc {
-    font-weight: lighter;
 }
 
+div .projLink:nth-of-type(2) {
+    margin-left: 20px;
+}
 
-
-
-
+.projDesc {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 1.4em;
+    letter-spacing: .05em;
+}
 
 .colorValues {
     color: #F2F2F2;
@@ -184,18 +271,27 @@ h3 {
     color: #F05D5B;
     color: #F49A64;
 }
-.c1 {background-color: #5D2E53;}
-.c2 {background-color: #8D3357;}
-.c3 {background-color: #C94D57;}
-.c4 {background-color: #F05D5B;}
-.c5 {background-color: #F49A64;}
+.c5 {color: #5D2E53;}
+.c4 {color: #8D3357;}
+.c2 {color: #C94D57;}
+.c3 {color: #F05D5B;}
+.c1 {color: #F49A64;}
 
 
 /* MOBILE STYLING */
 @media 
-
 /* Fairly small screens including iphones */
 only screen and (max-width: 624px),
 /* iPads */
 only screen and (min-device-width: 768px) and (max-device-width: 1024px) 
-{#topBorder, #bottomBorder, #leftBorder, #rightBorder { display: none; }}
+{header, aside, footer { display: none; }}
+
+@-webkit-keyframes fadeIn {
+    from {opacity: 0;} 
+    to {opacity: 1;}
+}
+  
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity:1 ;}
+}

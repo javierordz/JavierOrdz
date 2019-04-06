@@ -5,15 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Javier Ordonez</title>
+    <!-- <style type="text/css">html {overflow:hidden;}</style> -->
 
     <!-- FONTS -->
-    <link href="https://fonts.googleapis.com/css?family=Racing+Sans+One|Teko:700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Racing+Sans+One|Roboto" rel="stylesheet">
     <!-- BOOTSTRAP -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <!-- CUSTOM CSS -->
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
     <!-- ICONS -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -29,29 +32,52 @@
             <a href="https://www.linkedin.com/in/javierordz/" target="_blank"><img src="assets/images/s-linkedin.png" alt="LinkedIn" class="social"></a>
             <a href="https://www.instagram.com/javierordz/" target="_blank"><img src="assets/images/s-instagram.png" alt="Instagram" class="social"></a>
             <a href="https://www.facebook.com/javier.ordz" target="_blank"><img src="assets/images/s-facebook.png" alt="Facebook" class="social"></a>
+            <a href="mailto:javier.ordz@gmail.com" target="_blank"id="emailLink"><i class="fas fa-envelope social" style="font-size: 1.2em; display:block;"></i></a>
+            <a id="phoneLink" onclick="phoneNum()"><i class="fas fa-mobile-alt social" style="font-size: 1.3em;"><span class="popupText" id="phonePop">(214) 681-8131</span></i></a>
         </div>
     </aside>
 
     <!-- CONTENT -->
     <section class="wrapper">
-        
+
         <!-- SPLASH -->
-        <!-- <div id="splash">
-            <h1>DESIGN + STORY</h1>
-            <img src="assets/images/VB-icon.png" id="logo">
-            <p id="slogan">FROM BARE BONES TO FULL-GROWN <br> WE BELIEVE IN YOUR DREAM</p>
-        </div> -->
+        <div id="splash">
+            <!-- <h1>DESIGN + STORY</h1> -->
+            <div class="container-fluid">
+                <div class="row" >
+                    <div class="col-lg col-sm-12 max-height" style="max-width: 360px;">
+                        <img src="assets/images/VB-icon.png" id="logo">
+                    </div>
+
+                    <div class="col-lg col-sm-12 max-height text-center">
+                        <div id="block1">
+                            <p>The intersection of storytelling and design is my passion. 
+                                Weaving dream and fact to capture what people love about themselves and their products is what I do.</p>
+                        </div>
+                            <i class="fas fa-ellipsis-v ellipse c1"></i>
+                        <div id="block2"><p><i>GRAPHIC DESIGN</i></p></div>
+                            <i class="fas fa-ellipsis-v ellipse c2"></i>
+                        <div id="block3"><p><i>WEB DEVELOPMENT</i></p></div>
+                            <i class="fas fa-ellipsis-v ellipse c3"></i>
+                        <div id="block4"><p><i>VIDEO PRODUCTION</i></p></div>
+                            <i class="fas fa-ellipsis-v ellipse c4"></i>
+                        <div id="block5"><p><i>SOCIAL MEDIA STRATEGY</i></p></div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
 
         <!-- PORTFOLIO -->
-        <div id="portfolio">
+        <div id="portfolio" class="hidden-element">
             <h1>PORTFOLIO</h1>
 
             <div class="proj">
                 <img src="assets/images/Resume.JPG" alt="Resume" class="projImg">
                 <div class="overlay">
                     <div class="projTitle"><h3>RESUME</h3></div>
-                    <div class="projDesc">A brief summary of my experience</div>
-                    <a href="" class="projLink">View</a>
+                    <div class="projDesc">A brief summary of my experiences</div><br>
+                    <a href="assets/images/Ordonez - Resume.pdf" class="projLink" target="_blank">View</a>
                 </div>
             </div>
 
@@ -59,9 +85,9 @@
                 <img src="assets/images/Proj1.png" alt="NEXT JRNY" class="projImg">
                 <div class="overlay">
                     <div class="projTitle"><h3>NEXT JRNY</h3></div>
-                    <div class="projDesc">App for socially saving money for dream vacations</div>
-                    <a href="https://thewly.github.io/Project1/" class="projLink">View</a>
-                    <a href="https://github.com/thewly/Project1" class="projLink">GitHub</a>
+                    <div class="projDesc">App for socially saving money for dream vacations</div><br>
+                    <a href="https://thewly.github.io/Project1/" class="projLink" target="_blank">View</a>
+                    <a href="https://github.com/thewly/Project1" class="projLink" target="_blank">GitHub</a>
                 </div>
             </div>
 
@@ -69,9 +95,9 @@
                 <img src="assets/images/Proj2.gif" alt="NEXT JRNY" class="projImg">
                 <div class="overlay">
                     <div class="projTitle"><h3>TV TRIVIA</h3></div>
-                    <div class="projDesc">Television quiz</div>
-                    <a href="https://javierordz.github.io/TriviaGame/" class="projLink">View</a>
-                    <a href="https://github.com/javierordz/TriviaGame" class="projLink">GitHub</a>
+                    <div class="projDesc">Timed quiz on television history</div><br>
+                    <a href="https://javierordz.github.io/TriviaGame/" class="projLink" target="_blank">View</a>
+                    <a href="https://github.com/javierordz/TriviaGame" class="projLink" target="_blank">GitHub</a>
                 </div>
             </div>
 
@@ -79,35 +105,30 @@
                 <img src="assets/images/Proj3.jpg" alt="NEXT JRNY" class="projImg">
                 <div class="overlay">
                     <div class="projTitle"><h3>STAR WARS RPG</h3></div>
-                    <div class="projDesc">Role-playing game</div>
-                    <a href="https://javierordz.github.io/unit-4-game/" class="projLink">View</a>
-                    <a href="https://github.com/javierordz/unit-4-game" class="projLink">GitHub</a>
+                    <div class="projDesc">Role-playing game with dynamic html elements</div><br>
+                    <a href="https://javierordz.github.io/unit-4-game/" class="projLink" target="_blank">View</a>
+                    <a href="https://github.com/javierordz/unit-4-game" class="projLink" target="_blank">GitHub</a>
                 </div>
             </div>
 
 
         </div>
 
-
     </section>
 
     <!-- RIGHT BORDER -->
     <aside id="rightBorder">
-        <div class="verticalMenu" id="pf">
-            <a class="linkText" id="pfBtn">PORTFOLIO</a>
+        <div class="verticalMenu" id="switchBtn">
+            <i class="fas fa-arrow-right"></i>
+            <a class="linkText" id="switch-view">PORTFOLIO</a>
+            <i class="fas fa-arrow-right"></i>
         </div>
     </aside>
     
     <!-- BOTTOM BORDER -->
-    <footer id="bottomBorder">
-        <a class="linkText" id="nameLink"><i class="fas fa-mobile-alt"></i> (214) 681-8131</a> &nbsp; &nbsp; &nbsp;
-        <i class="fas fa-angle-left"></i> &nbsp;&nbsp;
-        <i class="fas fa-angle-right"></i> &nbsp; &nbsp; &nbsp;
-        <a href="mailto:javier.ordz@gmail.com" class="linkText" id="nameLink"><i class="fas fa-envelope"></i> JAVIER.ORDZ@GMAIL.COM</a>
-    </footer>
+    <footer id="bottomBorder"></footer>
 
     <script type="text/javascript" src="assets/javascript/logic.js"></script>
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
  
