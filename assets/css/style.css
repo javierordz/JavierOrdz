@@ -68,7 +68,7 @@ h3 {
     width: 100%;
     padding-left: 50px;
 }
-#topBorder { top: 0; }
+#topBorder { top: 0; z-index: 99; }
 #bottomBorder { bottom: 0; }
 
 /* BORDER LINKS */
@@ -134,7 +134,8 @@ h3 {
     opacity: 1;
     display: block;
     width: 500px;
-    height: auto;
+    height: 300px;
+    object-fit: cover;
     transition: .5s ease;
     backface-visibility: hidden;
 }
@@ -165,7 +166,9 @@ h3 {
     padding: 10px 32px;
   }
 
-
+.projDesc {
+    font-weight: lighter;
+}
 
 
 
