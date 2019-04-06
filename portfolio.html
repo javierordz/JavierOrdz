@@ -23,6 +23,12 @@
     <!-- TOP BORDER -->
     <header id="topBorder">
         <a href=# class="linkText" id="nameLink">JAVIER ORDONEZ</a>
+        <span class="switchBtn-alt">
+            <i class="fas fa-arrow-right"></i> &nbsp; &nbsp;
+            <a>PORTFOLIO</a> &nbsp; &nbsp;
+            <i class="fas fa-arrow-right"></i>
+        </span>
+
     </header>
  
     <!-- LEFT BORDER -->
@@ -33,7 +39,7 @@
             <a href="https://www.instagram.com/javierordz/" target="_blank"><img src="assets/images/s-instagram.png" alt="Instagram" class="social"></a>
             <a href="https://www.facebook.com/javier.ordz" target="_blank"><img src="assets/images/s-facebook.png" alt="Facebook" class="social"></a>
             <a href="mailto:javier.ordz@gmail.com" target="_blank"id="emailLink"><i class="fas fa-envelope social" style="font-size: 1.2em; display:block;"></i></a>
-            <a id="phoneLink" onclick="phoneNum()"><i class="fas fa-mobile-alt social" style="font-size: 1.3em;"><span class="popupText" id="phonePop">(214) 681-8131</span></i></a>
+            <a class="phoneLink" onclick="phoneNum()"><i class="fas fa-mobile-alt social" style="font-size: 1.3em;"><span class="popupText" class="phonePop">(214) 681-8131</span></i></a>
         </div>
     </aside>
 
@@ -45,14 +51,16 @@
             <!-- <h1>DESIGN + STORY</h1> -->
             <div class="container-fluid">
                 <div class="row" >
-                    <div class="col-lg col-sm-12 max-height" style="max-width: 360px;">
-                        <img src="assets/images/VB-icon.png" id="logo">
+                    <div class="col-lg col-sm-12 max-height">
+                        <!-- <div id="logo"> -->
+                            <img id="logo" src="assets/images/VB-icon.png">
+                        <!-- </div> -->
                     </div>
 
                     <div class="col-lg col-sm-12 max-height text-center">
                         <div id="block1">
-                            <p>The intersection of storytelling and design is my passion. 
-                                Weaving dream and fact to capture what people love about themselves and their products is what I do.</p>
+                            <p>I am very fond of storytelling. The intersection of story and design is my passion. 
+                                Weaving dream and fact to capture and highlight what people love about themselves and their ambitions is what I do.</p>
                         </div>
                             <i class="fas fa-ellipsis-v ellipse c1"></i>
                         <div id="block2"><p><i>GRAPHIC DESIGN</i></p></div>
@@ -62,6 +70,13 @@
                         <div id="block4"><p><i>VIDEO PRODUCTION</i></p></div>
                             <i class="fas fa-ellipsis-v ellipse c4"></i>
                         <div id="block5"><p><i>SOCIAL MEDIA STRATEGY</i></p></div>
+                            <i class="fas fa-ellipsis-v ellipse c5"></i>
+                        <div id="block6"><p>
+                            <p>I've studied media theory at the Massachusetts Institute of Technology (MIT), web development at Southern Methodist University (SMU), 
+                                and graphic design with a generous community of artists and madmen around the world.</p>
+                            <p>By day, I'm Creative Director at Aliento de Vida Ministries, a non-profit organization in the heart of Dallas where I bring life to stories and art for my spiritual community. By night, I do the same for you, my new client.</p>
+                            <p>So, let's talk about your story.</p>
+                        </p></div>
                     </div>
                     
                 </div>
@@ -118,15 +133,24 @@
 
     <!-- RIGHT BORDER -->
     <aside id="rightBorder">
-        <div class="verticalMenu" id="switchBtn">
+        <div class="verticalMenu switchBtn">
             <i class="fas fa-arrow-right"></i>
-            <a class="linkText" id="switch-view">PORTFOLIO</a>
+            <a class="linkText" class="switch-view">PORTFOLIO</a>
             <i class="fas fa-arrow-right"></i>
         </div>
     </aside>
     
     <!-- BOTTOM BORDER -->
-    <footer id="bottomBorder"></footer>
+    <footer id="bottomBorder">
+        <div class="horizontalMenu">
+            <a href="https://github.com/javierordz" target="_blank"><img src="assets/images/s-github.png" alt="Github" class="social"></a>
+            <a href="https://www.linkedin.com/in/javierordz/" target="_blank"><img src="assets/images/s-linkedin.png" alt="LinkedIn" class="social"></a>
+            <a href="https://www.instagram.com/javierordz/" target="_blank"><img src="assets/images/s-instagram.png" alt="Instagram" class="social"></a>
+            <a href="https://www.facebook.com/javier.ordz" target="_blank"><img src="assets/images/s-facebook.png" alt="Facebook" class="social"></a>
+            <a href="mailto:javier.ordz@gmail.com" target="_blank"id="emailLink"><i class="fas fa-envelope social" style="font-size: 1.2em;"></i></a>
+            <a class="phoneLink" onclick="phoneNum()"><i class="fas fa-mobile-alt social" style="font-size: 1.2em;"><span class="popupText" class="phonePop">(214) 681-8131</span></i></a>
+        </div>
+    </footer>
 
     <script type="text/javascript" src="assets/javascript/logic.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
