@@ -3,6 +3,7 @@ html {
     font-size: 1em;
     overflow: scroll;
     overflow-x: hidden;
+    /* background-color: #F2F2F2; */
 }
 
 ::-webkit-scrollbar {
@@ -195,9 +196,10 @@ p {
 
 #logo {
     display: block;
-    position: fixed;
-    top: 33%;
-    left: 48px;
+    /* position: fixed; */
+    /* top: 33%;
+    left: 48px; */
+    margin: 0 auto;
 }
 
 #block1, #block2, #block3, #block4, #block5, #block6 {
@@ -284,8 +286,8 @@ div .projLink:nth-of-type(2) {
 
 .c5 {color: #5D2E53;}
 .c4 {color: #8D3357;}
-.c2 {color: #C94D57;}
-.c3 {color: #F05D5B;}
+.c3 {color: #C94D57;}
+.c2 {color: #F05D5B;}
 .c1 {color: #F49A64;}
 
 
@@ -297,7 +299,6 @@ div .projLink:nth-of-type(2) {
         margin: auto;
         display: flex;
     }
-
 }
 
 @media /* phones */ only screen and (max-width: 624px), /* iPads */ only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
@@ -316,7 +317,7 @@ div .projLink:nth-of-type(2) {
         left: 0;
     }
 
-    .horizontalMenu {
+    .horizontalMenu, .switchBtn-alt {
         display: inline-flex;
     }
 
@@ -324,19 +325,5 @@ div .projLink:nth-of-type(2) {
         margin-top: 50px;
         font-size: 4em;
     }
-
-    .switchBtn-alt {
-        display: inline-flex;
-    }
 }
 
-
-/* @-webkit-keyframes fadeIn {
-    from {opacity: 0;} 
-    to {opacity: 1;}
-}
-  
-@keyframes fadeIn {
-    from {opacity: 0;}
-    to {opacity:1 ;}
-} */

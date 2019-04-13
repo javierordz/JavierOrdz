@@ -26,3 +26,8 @@ $(document).on("click", ".switchBtn-alt", function (event) {
     }
     $(`#${page[state]}`).removeClass("hidden-element");
 })
+
+// OPENING ANIMATION //
+window.onload = function () {
+    
+}
